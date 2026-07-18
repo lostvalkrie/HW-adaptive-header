@@ -1,0 +1,97 @@
+@font-face {
+  font-family: "Fontdiner-Swanky";
+  src: url("../fonts/FontdinerSwanky-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-color: #333;
+  --light-color: #f3f3db;
+  --yellow-color: #fdfd78;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  gap: 10px;
+  flex-wrap: wrap;
+  background: var(--dark-color);
+  color: var(--light-color);
+}
+
+.h1-text {
+  font-family: Fontdiner-Swanky;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.h-nav-item {
+  display: block;
+  padding: 10px;
+}
+
+.h-nav-item:hover {
+  color: var(--yellow-color);
+  transform: translateY(2px);
+}
+
+.contact {
+  font-size: 0.8rem;
+  padding: 10px 20px;
+  border: 2px solid var(--light-color);
+  border-radius: 3px;
+}
+
+.contact:hover {
+  color: var(--yellow-color);
+  border-color: var(--yellow-color);
+}
+
+.contact:active {
+  filter: brightness(0.8);
+}
+
+@media screen and (max-width: 768px) {
+  .contact-wrap {
+    width: 100%;
+  }
+
+  .main-header {
+    row-gap: 20px;
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .main-header {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 40px 20px;
+  }
+
+  .header-nav {
+    margin-bottom: 10px;
+  }
+
+  .h-nav-item {
+    padding: 10px 0;
+  }
+}
